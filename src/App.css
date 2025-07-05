@@ -1,0 +1,9 @@
+/* src/App.css */
+/* Tailwind CSS will handle most styling */
+
+/* You can add any custom global styles here that are not handled by Tailwind */
+
+/* Example: Ensure full height for the app */
+.app {
+  min-height: 100vh;
+}
