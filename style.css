@@ -105,20 +105,22 @@ nav a:hover {
 }
 
 #whatsapp-button {
-    background-color: #25d366;
-    color: #fff;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
-    margin-top: 1rem;
-    cursor: pointer;
+    background-color: #25d366;         /* WhatsApp பச்சை */
+    color: #fff;                       /* வெள்ளை எழுத்து */
+    padding: 1rem 2rem;                /* உள்ளே spacing */
+    border: none;                      /* border இல்லாமல் */
+    border-radius: 25px;               /* வட்ட வடிவ edges */
+    font-weight: bold;                /* bold எழுத்து */
+    margin-top: 1rem;                 /* மேல் இடைவெளி */
+    cursor: pointer;                  /* pointer cursor */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #whatsapp-button:hover {
-    background-color: #128c7e;
-    transform: scale(1.05);
+    background-color: #128c7e;        /* hover பண்ணும்போது darker green */
+    transform: scale(1.05);           /* சிறிய zoom effect */
+}
+
 }
 
 section {
