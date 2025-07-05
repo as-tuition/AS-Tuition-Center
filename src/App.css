@@ -1,0 +1,155 @@
+/* App.css */
+.App {
+  text-align: center;
+  background-color: #ffffff; /* White background */
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.main-header {
+  background-color: #002366; /* Royal Blue */
+  padding: 20px;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.App-logo {
+  height: 80px;
+  pointer-events: none;
+  margin-bottom: 10px;
+}
+
+.language-toggle-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 12px;
+  background-color: #FFD700; /* Gold Accent */
+  color: #002366; /* Royal Blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.language-toggle-button:hover {
+  background-color: #e0b800; /* Darker Gold */
+}
+
+section {
+  padding: 40px 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #002366; /* Royal Blue */
+}
+
+/* Specific section styling adjustments for royal look */
+.hero-section {
+  background-color: #f0f4f7; /* Light grey-blue */
+  color: #002366;
+}
+
+.hero-section h1 {
+  color: #002366;
+}
+
+.whatsapp-button {
+  background-color: #002366;
+  color: white;
+}
+
+.whatsapp-button:hover {
+  background-color: #FFD700;
+  color: #002366;
+}
+
+.programs-section {
+  background-color: #e6eaf0; /* Slightly darker grey-blue */
+}
+
+.programs-section h2 {
+  color: #002366;
+}
+
+.program-card {
+  background-color: white;
+}
+
+.program-card h3 {
+  color: #002366;
+}
+
+.features-section {
+  background-color: #f0f4f7;
+}
+
+.features-section h2 {
+  color: #002366;
+}
+
+.feature-card {
+  background-color: white;
+}
+
+.feature-card h3 {
+  color: #002366;
+}
+
+.daily-video-feature {
+  background-color: #e6eaf0;
+}
+
+.daily-video-feature h3 {
+  color: #002366;
+}
+
+.contact-section {
+  background-color: #f0f4f7;
+}
+
+.contact-section h2 {
+  color: #002366;
+}
+
+.contact-details {
+  background-color: white;
+}
+
+.contact-details strong {
+  color: #002366;
+}
+
+.gpay-button {
+  background-color: #002366;
+  color: white;
+}
+
+.gpay-button:hover {
+  background-color: #FFD700;
+  color: #002366;
+}
+
+.app-footer {
+  background-color: #002366;
+  color: white;
+}
+
+.social-media-links a {
+  color: #FFD700;
+}
+
+.social-media-links a:hover {
+  color: #e0b800;
+}

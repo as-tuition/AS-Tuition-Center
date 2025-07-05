@@ -1,3 +1,4 @@
 # Gitignore for static website
 node_modules/
 .DS_Store
+build/

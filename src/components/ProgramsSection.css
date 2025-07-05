@@ -1,0 +1,42 @@
+.programs-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f0f4c3; /* Light yellow-green background */
+}
+
+.programs-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #689f38; /* Green */
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+}
+
+.program-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #33691e; /* Darker green */
+}
+
+.program-card p {
+  font-size: 1.1em;
+  color: #555;
+}

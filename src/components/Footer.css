@@ -1,0 +1,31 @@
+.app-footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.app-footer p {
+  margin: 5px 0;
+}
+
+.social-media-links {
+  margin-top: 20px;
+}
+
+.social-media-links h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.social-media-links a {
+  color: #61dafb; /* React blue */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.social-media-links a:hover {
+  text-decoration: underline;
+}
