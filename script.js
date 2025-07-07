@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const translatableElements = document.querySelectorAll('[data-en]');
     const whatsappButton = document.getElementById('whatsapp-button');
 
-    // Load language from localStorage or default to English
     let currentLang = localStorage.getItem('lang') || 'en';
 
     function updateLanguage() {
@@ -13,17 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Apply initial language setting
     updateLanguage();
 
-    // Handle language toggle
     langToggle?.addEventListener('click', () => {
         currentLang = currentLang === 'en' ? 'ta' : 'en';
         localStorage.setItem('lang', currentLang);
         updateLanguage();
     });
 
-    // Smooth scrolling for nav links
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -34,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // WhatsApp button functionality
     whatsappButton?.addEventListener('click', () => {
         window.open("https://wa.me/9524863508", "_blank");
     });
