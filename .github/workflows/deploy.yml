@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write  # Needed to push to gh-pages
+  contents: write
 
 jobs:
   deploy:
@@ -19,15 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-      - name: Cache Node Modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: '20'
 
       - name: Install Dependencies
         run: npm ci
@@ -35,9 +27,12 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Configure Git User
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "github-actions[bot]"
+
       - name: Deploy to GitHub Pages
-        run: npm run deploy
         env:
-          CI: true
-          GIT_USER: github-actions-bot
-          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy
