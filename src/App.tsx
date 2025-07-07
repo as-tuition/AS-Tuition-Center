@@ -1,13 +1,13 @@
 import React from 'react';
 import LocationSection from './components/LocationSection';
-import ContactToggle from './components/ContactToggle';
+import ContactButtons from './components/ContactToggle';
 
 function App() {
   return (
     <div>
       {/* Other sections */}
       <LocationSection />
-      <ContactToggle />
+      <ContactButtons />
     </div>
   );
 }
