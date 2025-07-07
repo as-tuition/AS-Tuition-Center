@@ -139,6 +139,27 @@ nav a {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+/* Floating WhatsApp Share Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
+.floating-whatsapp img {
+  width: 48px;
+  height: 48px;
+}
+
+
 section {
   padding: 2rem 1rem;
   max-width: 900px;
