@@ -1,13 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AS-Tuition-Center</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-en="A.S Tuition Center" data-ta="ஏ.எஸ் டியூஷன் சென்டர்">A.S Tuition Center</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <h1>Hello from AS-Tuition-Center!</h1>
-    <script src="script.js"></script>
+
+  <header>
+    <div class="header-content">
+      <img src="public/logo.png" alt="A.S Tuition Center Logo" class="logo">
+      <h1 data-en="A.S Tuition Center" data-ta="ஏ.எஸ் டியூஷன் சென்டர்">A.S Tuition Center</h1>
+    </div>
+    <div class="top-right">
+      <button id="lang-toggle" data-en="தமிழ்" data-ta="English">தமிழ்</button>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home" data-en="Home" data-ta="முகப்பு">Home</a></li>
+      <li><a href="#about" data-en="About" data-ta="பற்றி">About</a></li>
+      <li><a href="#courses" data-en="Courses" data-ta="படிப்புகள்">Courses</a></li>
+      <li><a href="#video" data-en="Daily Video" data-ta="தினசரி வீடியோ">Daily Video</a></li>
+      <li><a href="#gallery" data-en="Gallery" data-ta="படங்கள்">Gallery</a></li>
+      <li><a href="#testimonials" data-en="Testimonials" data-ta="சான்றுகள்">Testimonials</a></li>
+      <li><a href="#contact" data-en="Contact" data-ta="தொடர்புக்கு">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Hero / Welcome -->
+    <section id="home" class="hero">
+      <h2 data-en="Empowering Young Minds" data-ta="இளம் மனங்களை மேம்படுத்துதல்">Empowering Young Minds</h2>
+      <p data-en="LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts" data-ta="LKG முதல் 12 ஆம் வகுப்பு வரை | கருத்து அடிப்படையிலான கற்றல் | தினசரி வீடியோக்கள் | வாட்ஸ்அப் சந்தேகங்கள்">LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts</p>
+      <a href="https://wa.me/9524863508" target="_blank">
+        <button id="whatsapp-button" data-en="WhatsApp Us" data-ta="வாட்ஸ்அப் செய்யவும்">WhatsApp Us</button>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2 data-en="About A.S Tuition Center" data-ta="ஏ.எஸ் டியூஷன் சென்டர் பற்றி">About A.S Tuition Center</h2>
+      <p data-en="We are committed to delivering high-quality education from LKG to 12th Standard. Our approach is rooted in concept-based learning and personal attention to each student. We also offer skill development programs and video-based learning every day." data-ta="ஏ.எஸ் டியூஷன் சென்டர் LKG முதல் 12 ஆம் வகுப்பு வரையிலான மாணவர்களுக்கு தரமான கல்வியை வழங்க அர்ப்பணிக்கப்பட்டுள்ளது. எங்கள் அணுகுமுறை கருத்து அடிப்படையிலான கற்றல் மற்றும் ஒவ்வொரு மாணவருக்கும் தனிப்பட்ட கவனத்தில் வேரூன்றியுள்ளது. நாங்கள் தினசரி திறன் மேம்பாட்டு திட்டங்கள் மற்றும் வீடியோ அடிப்படையிலான கற்றலையும் வழங்குகிறோம்.">We are committed to delivering high-quality education from LKG to 12th Standard. Our approach is rooted in concept-based learning and personal attention to each student. We also offer skill development programs and video-based learning every day.</p>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses">
+      <h2 data-en="Courses Offered" data-ta="வழங்கப்படும் படிப்புகள்">Courses Offered</h2>
+      <ul>
+        <li data-en="LKG to 12th Standard (State Board & CBSE)" data-ta="LKG முதல் 12 ஆம் வகுப்பு வரை (மாநில வாரியம் & சிபிஎஸ்இ)">LKG to 12th Standard (State Board & CBSE)</li>
+        <li data-en="Tamil, English, Mathematics, Science, Social Science" data-ta="தமிழ், ஆங்கிலம், கணிதம், அறிவியல், சமூக அறிவியல்">Tamil, English, Mathematics, Science, Social Science</li>
+        <li data-en="Physics, Chemistry, Biology, Computer Science" data-ta="இயற்பியல், வேதியியல், உயிரியல், கணினி அறிவியல்">Physics, Chemistry, Biology, Computer Science</li>
+        <li data-en="Commerce, Accountancy, Economics" data-ta="வர்த்தகம், கணக்கியல், பொருளாதாரம்">Commerce, Accountancy, Economics</li>
+      </ul>
+    </section>
+
+    <!-- Daily Learning Video -->
+    <section id="video">
+      <h2 data-en="Daily Learning Video" data-ta="தினசரி கற்றல் வீடியோ">Daily Learning Video</h2>
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Daily Learning Video" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Photo Gallery / Staff Section -->
+    <section id="gallery">
+      <h2 data-en="Our Gallery" data-ta="எங்கள் கேலரி">Our Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Gallery Image 1">
+        <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Gallery Image 2">
+        <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Gallery Image 3">
+        <img src="https://via.placeholder.com/300x200?text=Image+4" alt="Gallery Image 4">
+      </div>
+      <p data-en="(Placeholder images. Please provide actual images if you have them.)" data-ta="(இவை மாதிரி படங்கள். உங்களிடம் உண்மையான படங்கள் இருந்தால் வழங்கவும்.)">(Placeholder images. Please provide actual images if you have them.)</p>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <h2 data-en="Student Testimonials" data-ta="மாணவர் சான்றுகள்">Student Testimonials</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-item">
+          <p data-en="'A.S Tuition Center helped me understand complex concepts easily. The teachers are very supportive!'" data-ta="'ஏ.எஸ் டியூஷன் சென்டர் எனக்கு கடினமான கருத்துக்களை எளிதாகப் புரிந்துகொள்ள உதவியது. ஆசிரியர்கள் மிகவும் ஆதரவாக இருக்கிறார்கள்!'">'A.S Tuition Center helped me understand complex concepts easily. The teachers are very supportive!'</p>
+          <p class="author" data-en="- Student A" data-ta="- மாணவர் அ">- Student A</p>
+        </div>
+        <div class="testimonial-item">
+          <p data-en="'My grades improved significantly after joining A.S Tuition. Highly recommended!'" data-ta="'ஏ.எஸ் டியூஷனில் சேர்ந்த பிறகு என் மதிப்பெண்கள் கணிசமாக உயர்ந்தன. மிகவும் பரிந்துரைக்கப்படுகிறது!'">'My grades improved significantly after joining A.S Tuition. Highly recommended!'</p>
+          <p class="author" data-en="- Parent of Student B" data-ta="- மாணவர் ஆ-வின் பெற்றோர்">- Parent of Student B</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact + Map -->
+    <section id="contact">
+      <h2 data-en="Contact Us" data-ta="தொடர்பு கொள்ளவும்">Contact Us</h2>
+      <p><strong data-en="Phone:" data-ta="தொலைபேசி:">Phone:</strong> <a href="tel:9524863508">9524863508</a></p>
+      <p><strong data-en="Address:" data-ta="முகவரி:">Address:</strong> <span data-en="Kaliyamman Kovil Street, Vedapatti, Madathukulam" data-ta="காளியம்மன் கோவில் தெரு, வேதபட்டி, மடத்துக்குளம்">Kaliyamman Kovil Street, Vedapatti, Madathukulam</span></p>
+      <div class="contact-buttons">
+        <a href="tel:9524863508"><button class="call-button" data-en="Call Now" data-ta="இப்போதே அழைக்கவும்">Call Now</button></a>
+        <a href="upi://pay?pa=9524863508@okbizaxis&pn=AS%20Tuition%20Center&cu=INR" target="_blank"><button class="gpay-button" data-en="Pay with GPay" data-ta="கூகிள் பே மூலம் பணம் செலுத்துங்கள்">Pay with GPay</button></a>
+      </div>
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.4236940156885!2d77.35977751425342!3d10.57838329248462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba81b23ab03c9e5%3A0xf4c6fcb40ef17e42!2sKaliyamman%20Kovil%20St%2C%20Vedapatti%2C%20Tamil%20Nadu%20642402!5e0!3m2!1sen!2sin!4v1710000000000"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p data-en="&copy; 2025 A.S Tuition Center. All rights reserved." data-ta="&copy; 2025 ஏ.எஸ் டியூஷன் சென்டர். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">&copy; 2025 A.S Tuition Center. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
