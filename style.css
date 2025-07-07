@@ -159,6 +159,26 @@ nav a {
   height: 48px;
 }
 
+.staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.staff-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.staff-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
 section {
   padding: 2rem 1rem;
