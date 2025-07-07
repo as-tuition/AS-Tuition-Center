@@ -73,3 +73,41 @@
   font-family: 'Playfair Display', serif;
   margin-bottom: 0.5rem;
 }
+
+.contact-buttons {
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.action-button {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #0c1e3c;
+  background: gold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.action-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+}
+
+.call::before {
+  content: " ";
+}
+
+.whatsapp::before {
+  content: " ";
+}
+
+.gpay::before {
+  content: " ";
+}
