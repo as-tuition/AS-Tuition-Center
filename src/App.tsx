@@ -1,6 +1,7 @@
 import React from 'react';
 import LocationSection from './components/LocationSection';
 import ContactButtons from './components/ContactToggle';
+import StaffSection from './components/StaffSection';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       {/* Other sections */}
       <LocationSection />
       <ContactButtons />
+      <StaffSection />
     </div>
   );
 }
