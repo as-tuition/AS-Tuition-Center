@@ -1,0 +1,1 @@
+alert('Welcome to AS-Tuition-Center!');
