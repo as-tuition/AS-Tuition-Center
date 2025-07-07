@@ -118,7 +118,27 @@ nav a {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6);
 }
+.share-container {
+  text-align: center;
+  margin: 2rem 0;
+}
 
+.whatsapp-share-button {
+  background-color: #25D366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-share-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
 section {
   padding: 2rem 1rem;
   max-width: 900px;
