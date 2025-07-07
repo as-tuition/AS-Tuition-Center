@@ -35,6 +35,11 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Configure Git User
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
