@@ -2,7 +2,6 @@ import React from 'react';
 import { MessageSquare, Phone, IndianRupee } from 'lucide-react';
 
 const ContactButtons = () => {
-  const phone = '9524863508';
 
   return (
     <div className="contact-buttons">
