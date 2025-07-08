@@ -98,26 +98,25 @@ nav a {
 }
 
 #whatsapp-button,
-.call-button,
-.gpay-button {
-  background-color: gold;
-  color: #0c1e3c;
+.whatsapp-share-button {
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
   margin: 0.5rem;
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
   transition: all 0.3s ease;
 }
 
 #whatsapp-button:hover,
-.call-button:hover,
-.gpay-button:hover {
+.whatsapp-share-button:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
 }
+
 .share-container {
   text-align: center;
   margin: 2rem 0;
