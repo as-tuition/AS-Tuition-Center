@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background-color: #0c1e3c; /* deep blue */
+  background-color: #0c1e3c;
   color: gold;
   text-align: center;
   padding: 1rem;
@@ -68,7 +68,7 @@ nav ul {
   padding: 0;
   margin-top: 0.5rem;
   flex-wrap: wrap;
-  background-color: #183b6b; /* slightly lighter blue for nav */
+  background-color: #183b6b;
   padding: 0.5rem 0;
 }
 
@@ -97,7 +97,7 @@ nav a {
   font-size: 1.2rem;
 }
 
-/* WhatsApp Button Only - Original Green */
+/* WhatsApp Button – Original Green */
 #whatsapp-button {
   background-color: #25D366;
   color: white;
@@ -116,7 +116,7 @@ nav a {
   box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
 }
 
-/* Call & GPay Buttons - Gold Style */
+/* Call & GPay Buttons – Gold Theme */
 .call-button,
 .gpay-button {
   background-color: gold;
@@ -135,6 +135,25 @@ nav a {
 .gpay-button:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Donate Button – Royal Purple */
+.donate-button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5rem;
+  box-shadow: 0 4px 12px rgba(106, 27, 154, 0.4);
+  transition: all 0.3s ease;
+}
+
+.donate-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(106, 27, 154, 0.6);
 }
 
 .share-container {
@@ -158,6 +177,7 @@ nav a {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+
 /* Floating WhatsApp Share Button */
 .floating-whatsapp {
   position: fixed;
@@ -178,6 +198,7 @@ nav a {
   height: 48px;
 }
 
+/* Staff Section */
 .staff-grid {
   display: flex;
   flex-wrap: wrap;
@@ -199,6 +220,7 @@ nav a {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Sections */
 section {
   padding: 2rem 1rem;
   max-width: 900px;
@@ -222,6 +244,7 @@ ul {
   text-align: center;
 }
 
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -236,6 +259,7 @@ ul {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Testimonials */
 .testimonial-carousel {
   display: flex;
   overflow-x: auto;
@@ -265,29 +289,32 @@ ul {
   font-weight: bold;
 }
 
+/* Contact */
 .contact-buttons {
   text-align: center;
   margin-top: 1rem;
 }
-/* Donate Button Style */
-.donate-button {
-  background-color: #6a1b9a; /* Royal Purple */
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
+
+/* GPay QR Code Section */
+.qr-wrapper {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.qr-wrapper img {
+  max-width: 260px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.qr-wrapper .upi-id {
+  margin-top: 0.5rem;
   font-weight: bold;
-  cursor: pointer;
-  margin: 0.5rem;
-  box-shadow: 0 4px 12px rgba(106, 27, 154, 0.4);
-  transition: all 0.3s ease;
+  color: #0c1e3c;
 }
 
-.donate-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(106, 27, 154, 0.6);
-}
-
+/* Footer */
 footer {
   background-color: #0c1e3c;
   color: gold;
@@ -296,6 +323,7 @@ footer {
   margin-top: 2rem;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
