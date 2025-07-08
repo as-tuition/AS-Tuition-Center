@@ -238,11 +238,18 @@ h2 {
 ul {
   padding-left: 1.5rem;
 }
+.video-wrapper iframe {
+  max-width: 100%;
+  width: 560px;
+  height: auto;
+  display: inline-block;
+}
 
 .video-wrapper,
 .map-wrapper {
   text-align: center;
 }
+
 
 /* Gallery */
 .gallery-grid {
