@@ -97,9 +97,9 @@ nav a {
   font-size: 1.2rem;
 }
 
-#whatsapp-button,
-.whatsapp-share-button {
-  background-color: #25D366; /* WhatsApp green */
+/* WhatsApp Button Only - Original Green */
+#whatsapp-button {
+  background-color: #25D366;
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -111,10 +111,30 @@ nav a {
   transition: all 0.3s ease;
 }
 
-#whatsapp-button:hover,
-.whatsapp-share-button:hover {
+#whatsapp-button:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
+}
+
+/* Call & GPay Buttons - Gold Style */
+.call-button,
+.gpay-button {
+  background-color: gold;
+  color: #0c1e3c;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5rem;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.call-button:hover,
+.gpay-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6);
 }
 
 .share-container {
