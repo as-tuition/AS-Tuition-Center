@@ -45,7 +45,11 @@
 <body>
 
   <!-- Floating Share Button -->
-  <a class="floating-share" href="https://wa.me/?text=https://as-tuition.github.io/AS-Tuition-Center/" target="_blank" title="Share on WhatsApp">
+  <a class="floating-share"
+   href="https://wa.me/?text=https://as-tuition.github.io/AS-Tuition-Center/"
+   target="_blank"
+   onclick="gtag('event', 'click', { 'event_category': 'share', 'event_label': 'WhatsApp Floating Share' });"
+   title="Share on WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp Share Icon">
   </a>
 
@@ -77,16 +81,19 @@
     <section id="home" class="hero">
       <h2 data-en="Empowering Young Minds" data-ta="இளம் மனங்களை மேம்படுத்துதல்">Empowering Young Minds</h2>
       <p data-en="LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts" data-ta="LKG முதல் 12 ஆம் வகுப்பு வரை | கருத்து அடிப்படையிலான கற்றல் | தினசரி வீடியோக்கள் | வாட்ஸ்அப் சந்தேகங்கள்">LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts</p>
-   <a href="https://wa.me/9524863508" target="_blank">
+   <a href="https://wa.me/9524863508" target="_blank"
+   onclick="gtag('event', 'click', { 'event_category': 'button', 'event_label': 'WhatsApp Us' });">
   <button id="whatsapp-button" data-en="WhatsApp Us" data-ta="வாட்ஸ்அப் செய்யவும்">WhatsApp Us</button>
 </a>
 
 <!-- Channel Button (புதியது) -->
-<a href="https://whatsapp.com/channel/0029Vb7ASL9HQbS2Bm6KFN3D" target="_blank">
+<a href="https://whatsapp.com/channel/0029Vb7ASL9HQbS2Bm6KFN3D" target="_blank"
+   onclick="gtag('event', 'click', { 'event_category': 'channel', 'event_label': 'WhatsApp Channel Join' });">
   <button class="channel-button" data-en="Join Our WhatsApp Channel" data-ta="எங்கள் வாட்ஸ்அப் சேனலை சேர்ந்துக்கொள்ளுங்கள்">
     எங்கள் வாட்ஸ்அப் சேனலை சேர்ந்துக்கொள்ளுங்கள்
   </button>
 </a>
+
     </section>
 <!-- Staff Section -->
 <section id="staff">
@@ -206,13 +213,15 @@
     </button>
   </a>
 
-  <a href="upi://pay?pa=sangeethaaravindh95@okaxis&pn=SANGEETHA%20R&cu=INR" target="_blank">
+  <a href="upi://pay?pa=sangeethaaravindh95@okaxis&pn=SANGEETHA%20R&cu=INR" target="_blank"
+   onclick="gtag('event', 'click', { 'event_category': 'payment', 'event_label': 'GPay Donate' });">
     <button class="gpay-button" data-en="Pay with GPay" data-ta="கூகுள் பே மூலம் பணம் செலுத்துங்கள்">
       Pay with GPay
     </button>
   </a>
 
-  <a href="upi://pay?pa=9524863508@cnrb&pn=SANGEETHA%20R&cu=INR" target="_blank">
+  <a href="upi://pay?pa=9524863508@cnrb&pn=SANGEETHA%20R&cu=INR" target="_blank"
+   onclick="gtag('event', 'click', { 'event_category': 'payment', 'event_label': 'Donate' });">
     <button class="donate-button" data-en="Donate" data-ta="நன்கொடை">
       Donate
     </button>
