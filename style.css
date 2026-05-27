@@ -477,7 +477,39 @@ body.dark-mode .staff-tags span{
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+/* =========================
+   TOPPER NAMES
+========================= */
 
+.pass-title{
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.topper-item{
+  margin-top: 18px;
+}
+
+.topper-class{
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #c2185b;
+}
+
+.topper-name{
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: 4px;
+  color: #111;
+}
+
+body.dark-mode .topper-class,
+body.dark-mode .topper-name{
+  color: #fff;
+}
 .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
