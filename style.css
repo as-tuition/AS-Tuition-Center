@@ -16,7 +16,13 @@ html{
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#f4f7fb;
+  background:linear-gradient(
+    135deg,
+    #5b1f8f 0%,
+    #7b1fa2 30%,
+    #c2185b 65%,
+    #ff1744 100%
+  );
   color:#222;
   line-height:1.6;
 }
