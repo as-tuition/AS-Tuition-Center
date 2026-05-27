@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
 
   <title>A.S Tuition Center</title>
 
@@ -11,310 +15,112 @@
         content="A.S Tuition Center in Madathukulam - LKG to 12th Tuition, Concept-Based Learning, CBSE & State Board Coaching">
 
   <meta name="keywords"
-        content="Tuition Center, Madathukulam Tuition, CBSE Tuition, State Board Tuition, A.S Tuition Center">
+        content="Tuition Center, Madathukulam Tuition, CBSE Tuition, State Board Tuition">
 
-  <meta name="author" content="A.S Tuition Center">
+  <meta name="author"
+        content="A.S Tuition Center">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="A.S Tuition Center" />
+  <meta property="og:title"
+        content="A.S Tuition Center">
+
   <meta property="og:description"
-        content="LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts" />
+        content="LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts">
 
   <meta property="og:image"
-        content="https://as-tuition.github.io/AS-Tuition-Center/public/logo.png" />
-
-  <meta property="og:url"
-        content="https://as-tuition.github.io/AS-Tuition-Center/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
+        content="public/logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="public/logo.png">
+  <link rel="icon"
+        type="image/png"
+        href="public/logo.png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet"
+        href="style.css">
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-00RPL180G1"></script>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'G-00RPL180G1');
-  </script>
-
-  <style>
-
-    body{
-      margin:0;
-      font-family:'Open Sans',sans-serif;
-      background:#f4f4f4;
-      color:#333;
-    }
-
-    header{
-      background:#0d6efd;
-      color:white;
-      padding:20px;
-      text-align:center;
-      position:relative;
-    }
-
-    .logo{
-      width:90px;
-      height:90px;
-      border-radius:50%;
-      object-fit:cover;
-    }
-
-    .top-right{
-      position:absolute;
-      top:20px;
-      right:20px;
-    }
-
-    #lang-toggle{
-      padding:8px 15px;
-      border:none;
-      border-radius:8px;
-      cursor:pointer;
-      font-weight:bold;
-    }
-
-    nav{
-      background:#222;
-    }
-
-    nav ul{
-      margin:0;
-      padding:0;
-      list-style:none;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-
-    nav ul li{
-      margin:0;
-    }
-
-    nav ul li a{
-      color:white;
-      text-decoration:none;
-      display:block;
-      padding:15px 20px;
-    }
-
-    nav ul li a:hover{
-      background:#0d6efd;
-    }
-
-    section{
-      padding:40px 20px;
-      background:white;
-      margin:20px;
-      border-radius:12px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    h1,h2{
-      font-family:'Playfair Display',serif;
-    }
-
-    .hero{
-      text-align:center;
-      background:linear-gradient(135deg,#0d6efd,#4dabf7);
-      color:white;
-    }
-
-    button{
-      padding:12px 20px;
-      border:none;
-      border-radius:10px;
-      cursor:pointer;
-      margin:10px;
-      font-size:16px;
-      font-weight:bold;
-    }
-
-    #whatsapp-button{
-      background:#25D366;
-      color:white;
-    }
-
-    .channel-button{
-      background:#222;
-      color:white;
-    }
-
-    .google-form-button{
-      display:inline-block;
-      background:#0d6efd;
-      color:white;
-      padding:14px 24px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    .staff-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .staff-member{
-      text-align:center;
-      padding:20px;
-      border-radius:12px;
-      background:#fafafa;
-    }
-
-    .staff-member img{
-      width:150px;
-      height:150px;
-      border-radius:50%;
-      object-fit:cover;
-    }
-
-    .video-wrapper iframe{
-      width:100%;
-      height:400px;
-      border:none;
-      border-radius:12px;
-    }
-
-    .testimonial-item{
-      background:#f9f9f9;
-      padding:20px;
-      border-radius:12px;
-      margin-bottom:20px;
-    }
-
-    .contact-buttons{
-      margin-top:20px;
-    }
-
-    .call-button{
-      background:#198754;
-      color:white;
-    }
-
-    .gpay-button{
-      background:#0d6efd;
-      color:white;
-    }
-
-    .donate-button{
-      background:#ff9800;
-      color:white;
-    }
-
-    .qr-wrapper{
-      text-align:center;
-      margin-top:30px;
-    }
-
-    .qr-wrapper img{
-      width:220px;
-      max-width:100%;
-      border-radius:12px;
-    }
-
-    .map-wrapper iframe{
-      width:100%;
-      height:350px;
-      border:0;
-      border-radius:12px;
-      margin-top:20px;
-    }
-
-    footer{
-      background:#222;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
-
-    .floating-share{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      border-radius:50%;
-      padding:15px;
-      z-index:9999;
-      box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .floating-share img{
-      width:30px;
-      height:30px;
-    }
-
-    @media(max-width:768px){
-
-      nav ul{
-        flex-direction:column;
-      }
-
-      .video-wrapper iframe{
-        height:250px;
-      }
-
-    }
-
-  </style>
 </head>
 
 <body>
 
-  <!-- Floating WhatsApp Share -->
+  <!-- Floating WhatsApp -->
   <a class="floating-share"
-     href="https://wa.me/?text=https://as-tuition.github.io/AS-Tuition-Center/"
+     href="https://wa.me/9524863508"
      target="_blank"
-     rel="noopener noreferrer"
-     title="Share on WhatsApp">
+     rel="noopener noreferrer">
 
-     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
-          alt="WhatsApp Share">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+         alt="WhatsApp">
+
   </a>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header>
 
-    <img src="public/logo.png"
-         alt="A.S Tuition Center Logo"
-         class="logo">
+    <div class="header-content">
 
-    <h1>A.S Tuition Center</h1>
+      <img src="public/logo.png"
+           alt="A.S Tuition Center Logo"
+           class="logo">
 
-    <div class="top-right">
-      <button id="lang-toggle">தமிழ்</button>
+      <h1>
+        A.S Tuition Center
+      </h1>
+
     </div>
+
+    <button id="lang-toggle">
+      தமிழ்
+    </button>
 
   </header>
 
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
   <nav>
 
     <ul>
 
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#video">Daily Video</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="#home">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#about">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#results">
+          Results
+        </a>
+      </li>
+
+      <li>
+        <a href="#courses">
+          Courses
+        </a>
+      </li>
+
+      <li>
+        <a href="#video">
+          Video
+        </a>
+      </li>
+
+      <li>
+        <a href="#gallery">
+          Gallery
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          Contact
+        </a>
+      </li>
 
     </ul>
 
@@ -322,10 +128,13 @@
 
   <main>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
+    <!-- HERO -->
+    <section id="home"
+             class="hero">
 
-      <h2>Empowering Young Minds</h2>
+      <h2>
+        Empowering Young Minds
+      </h2>
 
       <p>
         LKG to 12th |
@@ -349,20 +158,22 @@
          rel="noopener noreferrer">
 
         <button class="channel-button">
-          Join Our WhatsApp Channel
+          Join WhatsApp Channel
         </button>
 
       </a>
 
     </section>
 
-    <!-- Admission -->
+    <!-- ADMISSION -->
     <section id="admission-form">
 
-      <h2>Admission Enquiry</h2>
+      <h2>
+        Admission Enquiry
+      </h2>
 
       <p>
-        Click below to fill out our admission enquiry form.
+        Click below to fill our admission form.
       </p>
 
       <a href="https://forms.gle/49sRf9heo2NuBG927"
@@ -370,25 +181,29 @@
          rel="noopener noreferrer"
          class="google-form-button">
 
-         👉 Open Admission Form
+        👉 Open Admission Form
 
       </a>
 
     </section>
 
-    <!-- Staff -->
+    <!-- STAFF -->
     <section id="staff">
 
-      <h2>Our Teaching Staff</h2>
+      <h2>
+        Our Teaching Staff
+      </h2>
 
       <div class="staff-grid">
 
         <div class="staff-member">
 
           <img src="public/aravindh.jpg"
-               alt="Mr Aravindh M.E Founder and Senior Teacher">
+               alt="Mr Aravindh">
 
-          <h3>Mr. Aravindh.M, M.E</h3>
+          <h3>
+            Mr. Aravindh.M, M.E
+          </h3>
 
           <p>
             Founder & Senior Teacher
@@ -399,9 +214,11 @@
         <div class="staff-member">
 
           <img src="public/sangeetha.jpg"
-               alt="Mrs Sangeetha M.Sc Teacher">
+               alt="Mrs Sangeetha">
 
-          <h3>Mrs. Sangeetha.A, M.Sc</h3>
+          <h3>
+            Mrs. Sangeetha.A, M.Sc
+          </h3>
 
           <p>
             Maths & English Teacher
@@ -413,23 +230,92 @@
 
     </section>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about">
 
-      <h2>About Us</h2>
+      <h2>
+        About Us
+      </h2>
 
       <p>
-        We are committed to delivering high-quality education
-        from LKG to 12th standard with concept-based learning
-        and individual student attention.
+        We provide high quality education
+        from LKG to 12th standard with
+        concept-based learning and
+        individual student attention.
       </p>
 
     </section>
 
-    <!-- Courses -->
+    <!-- RESULTS -->
+    <section id="results">
+
+      <h2>
+        2025 - 2026 Results
+      </h2>
+
+      <div class="pass-badge">
+        100% தேர்ச்சி
+      </div>
+
+      <div class="results-grid">
+
+        <!-- 12th -->
+        <div class="result-card">
+
+          <h3>
+            12ஆம் வகுப்பு
+          </h3>
+
+          <h1>
+            498 / 600
+          </h1>
+
+          <ul>
+
+            <li>தமிழ் - 92</li>
+            <li>ஆங்கிலம் - 84</li>
+            <li>இயற்பியல் - 76</li>
+            <li>வேதியியல் - 84</li>
+            <li>உயிரியல் - 86</li>
+            <li>கணிதம் - 76</li>
+
+          </ul>
+
+        </div>
+
+        <!-- 10th -->
+        <div class="result-card">
+
+          <h3>
+            10ஆம் வகுப்பு
+          </h3>
+
+          <h1>
+            480 / 500
+          </h1>
+
+          <ul>
+
+            <li>தமிழ் - 96</li>
+            <li>ஆங்கிலம் - 95</li>
+            <li>கணிதம் - 95</li>
+            <li>அறிவியல் - 100</li>
+            <li>ச.அறிவியல் - 94</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- COURSES -->
     <section id="courses">
 
-      <h2>Courses Offered</h2>
+      <h2>
+        Courses Offered
+      </h2>
 
       <ul>
 
@@ -445,10 +331,12 @@
 
     </section>
 
-    <!-- Video -->
+    <!-- VIDEO -->
     <section id="video">
 
-      <h2>Daily Learning Video</h2>
+      <h2>
+        Daily Learning Video
+      </h2>
 
       <div class="video-wrapper">
 
@@ -462,13 +350,16 @@
 
     </section>
 
-    <!-- Gallery -->
+    <!-- GALLERY -->
     <section id="gallery">
 
-      <h2>Our Gallery</h2>
+      <h2>
+        Our Gallery
+      </h2>
 
       <p>
-        View our latest classroom and student photos.
+        View our latest classroom and
+        student activities.
       </p>
 
       <a href="https://drive.google.com/drive/folders/1ukQdwGFyZ5-TrUmawLTO6h2xscx9xC32?usp=sharing"
@@ -482,15 +373,18 @@
 
     </section>
 
-    <!-- Testimonials -->
+    <!-- TESTIMONIAL -->
     <section id="testimonials">
 
-      <h2>Student Testimonials</h2>
+      <h2>
+        Student Testimonials
+      </h2>
 
       <div class="testimonial-item">
 
         <p>
-          "A.S Tuition Center helped me understand concepts easily."
+          "A.S Tuition Center helped me
+          understand concepts easily."
         </p>
 
       </div>
@@ -498,38 +392,49 @@
       <div class="testimonial-item">
 
         <p>
-          "My grades improved significantly after joining."
+          "My grades improved significantly
+          after joining."
         </p>
 
       </div>
 
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact">
 
-      <h2>Contact Us</h2>
+      <h2>
+        Contact Us
+      </h2>
 
       <p>
+
         <strong>Phone:</strong>
+
         <a href="tel:9524863508">
           9524863508
         </a>
+
       </p>
 
       <p>
+
         <strong>Address:</strong>
+
         Kaliyamman Kovil Street,
         Vedapatti,
         Madathukulam
+
       </p>
 
       <div class="contact-buttons">
 
         <a href="tel:9524863508">
+
           <button class="call-button">
             Call Now
           </button>
+
         </a>
 
         <a href="upi://pay?pa=sangeethaaravindh95@okaxis&pn=SANGEETHA%20R&cu=INR"
@@ -550,21 +455,20 @@
         <img src="images/gpay.png"
              alt="UPI QR Code">
 
-        <p>
-          UPI ID:
+        <p class="upi-id">
+          UPI:
           sangeethaaravindh95@okaxis
         </p>
 
       </div>
 
-      <!-- Map -->
+      <!-- MAP -->
       <div class="map-wrapper">
 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317.88887585760205!2d77.35995399310946!3d10.578167843010261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9cf9abe532d0d%3A0x26956de9148188bc!2sA%20S%20Tuition%20Center!5e0!3m2!1sen!2sin!4v1779891752233!5m2!1sen!2sin"
-          allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          allowfullscreen>
         </iframe>
 
       </div>
@@ -573,18 +477,20 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
 
     <p>
       © <span id="year"></span>
       A.S Tuition Center.
-      All rights reserved.
+      All Rights Reserved.
     </p>
 
   </footer>
 
   <!-- JS -->
+  <script src="script.js"></script>
+
   <script>
 
     document.getElementById("year").innerText =
