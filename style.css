@@ -538,6 +538,29 @@ body.dark-mode .topper-name{
   color: var(--white);
 }
 
+/* =========================
+   TOPPER NAME INSIDE CARD
+========================= */
+
+.topper-name{
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--yellow);
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+body.dark-mode .topper-name{
+  color: var(--yellow);
+}
+
+.result-card h1 {
+  font-size: 3.5rem;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
 .result-card h1 {
   font-size: 3.5rem;
   color: var(--yellow);
