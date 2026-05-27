@@ -3,267 +3,593 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-en="A.S Tuition Center" data-ta="ஏ.எஸ் டியூஷன் சென்டர்">A.S Tuition Center</title>
+
+  <title>A.S Tuition Center</title>
+
+  <!-- SEO -->
+  <meta name="description"
+        content="A.S Tuition Center in Madathukulam - LKG to 12th Tuition, Concept-Based Learning, CBSE & State Board Coaching">
+
+  <meta name="keywords"
+        content="Tuition Center, Madathukulam Tuition, CBSE Tuition, State Board Tuition, A.S Tuition Center">
+
+  <meta name="author" content="A.S Tuition Center">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="A.S Tuition Center" />
+  <meta property="og:description"
+        content="LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts" />
+
+  <meta property="og:image"
+        content="https://as-tuition.github.io/AS-Tuition-Center/public/logo.png" />
+
+  <meta property="og:url"
+        content="https://as-tuition.github.io/AS-Tuition-Center/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="public/logo.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-00RPL180G1"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-00RPL180G1');
   </script>
 
-  <meta property="og:title" content="A.S Tuition Center" />
-  <meta property="og:description" content="LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts" />
-  <meta property="og:image" content="https://as-tuition.github.io/AS-Tuition-Center/public/logo.png" />
-  <meta property="og:url" content="https://as-tuition.github.io/AS-Tuition-Center/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    /* Floating WhatsApp Share Button */
-    .floating-share {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      cursor: pointer;
-      z-index: 9999;
+
+    body{
+      margin:0;
+      font-family:'Open Sans',sans-serif;
+      background:#f4f4f4;
+      color:#333;
     }
-    .floating-share img {
-      width: 30px;
-      height: 30px;
+
+    header{
+      background:#0d6efd;
+      color:white;
+      padding:20px;
+      text-align:center;
+      position:relative;
     }
+
+    .logo{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .top-right{
+      position:absolute;
+      top:20px;
+      right:20px;
+    }
+
+    #lang-toggle{
+      padding:8px 15px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    nav{
+      background:#222;
+    }
+
+    nav ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    nav ul li{
+      margin:0;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      display:block;
+      padding:15px 20px;
+    }
+
+    nav ul li a:hover{
+      background:#0d6efd;
+    }
+
+    section{
+      padding:40px 20px;
+      background:white;
+      margin:20px;
+      border-radius:12px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    h1,h2{
+      font-family:'Playfair Display',serif;
+    }
+
+    .hero{
+      text-align:center;
+      background:linear-gradient(135deg,#0d6efd,#4dabf7);
+      color:white;
+    }
+
+    button{
+      padding:12px 20px;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      margin:10px;
+      font-size:16px;
+      font-weight:bold;
+    }
+
+    #whatsapp-button{
+      background:#25D366;
+      color:white;
+    }
+
+    .channel-button{
+      background:#222;
+      color:white;
+    }
+
+    .google-form-button{
+      display:inline-block;
+      background:#0d6efd;
+      color:white;
+      padding:14px 24px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .staff-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .staff-member{
+      text-align:center;
+      padding:20px;
+      border-radius:12px;
+      background:#fafafa;
+    }
+
+    .staff-member img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .video-wrapper iframe{
+      width:100%;
+      height:400px;
+      border:none;
+      border-radius:12px;
+    }
+
+    .testimonial-item{
+      background:#f9f9f9;
+      padding:20px;
+      border-radius:12px;
+      margin-bottom:20px;
+    }
+
+    .contact-buttons{
+      margin-top:20px;
+    }
+
+    .call-button{
+      background:#198754;
+      color:white;
+    }
+
+    .gpay-button{
+      background:#0d6efd;
+      color:white;
+    }
+
+    .donate-button{
+      background:#ff9800;
+      color:white;
+    }
+
+    .qr-wrapper{
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .qr-wrapper img{
+      width:220px;
+      max-width:100%;
+      border-radius:12px;
+    }
+
+    .map-wrapper iframe{
+      width:100%;
+      height:350px;
+      border:0;
+      border-radius:12px;
+      margin-top:20px;
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .floating-share{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      border-radius:50%;
+      padding:15px;
+      z-index:9999;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .floating-share img{
+      width:30px;
+      height:30px;
+    }
+
+    @media(max-width:768px){
+
+      nav ul{
+        flex-direction:column;
+      }
+
+      .video-wrapper iframe{
+        height:250px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
 
+  <!-- Floating WhatsApp Share -->
   <a class="floating-share"
      href="https://wa.me/?text=https://as-tuition.github.io/AS-Tuition-Center/"
      target="_blank"
-     onclick="gtag('event', 'click', { 'event_category': 'share', 'event_label': 'WhatsApp Floating Share' });"
+     rel="noopener noreferrer"
      title="Share on WhatsApp">
-     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp Share Icon">
+
+     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+          alt="WhatsApp Share">
   </a>
 
+  <!-- Header -->
   <header>
-    <div class="header-content">
-      <img src="public/logo.png" alt="A.S Tuition Center Logo" class="logo">
-      <h1 data-en="A.S Tuition Center" data-ta="ஏ.எஸ் டியூஷன் சென்டர்">A.S Tuition Center</h1>
-    </div>
+
+    <img src="public/logo.png"
+         alt="A.S Tuition Center Logo"
+         class="logo">
+
+    <h1>A.S Tuition Center</h1>
+
     <div class="top-right">
-      <button id="lang-toggle" data-en="தமிழ்" data-ta="English">தமிழ்</button>
+      <button id="lang-toggle">தமிழ்</button>
     </div>
+
   </header>
 
+  <!-- Navigation -->
   <nav>
+
     <ul>
-      <li><a href="#home" data-en="Home" data-ta="முகப்பு">Home</a></li>
-      <li><a href="#about" data-en="About" data-ta="பற்றி">About</a></li>
-      <li><a href="#courses" data-en="Courses" data-ta="படிப்புகள்">Courses</a></li>
-      <li><a href="#video" data-en="Daily Video" data-ta="தினசரி வீடியோ">Daily Video</a></li>
-      <li><a href="#gallery" data-en="Gallery" data-ta="படங்கள்">Gallery</a></li>
-      <li><a href="#testimonials" data-en="Testimonials" data-ta="சான்றுகள்">Testimonials</a></li>
-      <li><a href="#contact" data-en="Contact" data-ta="தொடர்புக்கு">Contact</a></li>
+
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#video">Daily Video</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+
     </ul>
+
   </nav>
 
   <main>
 
+    <!-- Hero -->
     <section id="home" class="hero">
-      <h2 data-en="Empowering Young Minds" data-ta="இளம் மனங்களை மேம்படுத்துதல்">Empowering Young Minds</h2>
-      <p data-en="LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts" data-ta="LKG முதல் 12 ஆம் வகுப்பு வரை | கருத்து அடிப்படையிலான கற்றல் | தினசரி வீடியோக்கள் | வாட்ஸ்அப் சந்தேகங்கள்">LKG to 12th | Concept-Based Learning | Daily Videos | WhatsApp Doubts</p>
-      
-      <a href="https://wa.me/9524863508" target="_blank"
-         onclick="gtag('event', 'click', { 'event_category': 'button', 'event_label': 'WhatsApp Us' });">
-        <button id="whatsapp-button" data-en="WhatsApp Us" data-ta="வாட்ஸ்அப் செய்யவும்">WhatsApp Us</button>
+
+      <h2>Empowering Young Minds</h2>
+
+      <p>
+        LKG to 12th |
+        Concept-Based Learning |
+        Daily Videos |
+        WhatsApp Doubts
+      </p>
+
+      <a href="https://wa.me/9524863508"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <button id="whatsapp-button">
+          WhatsApp Us
+        </button>
+
       </a>
 
-      <a href="https://whatsapp.com/channel/0029Vb7ASL9HQbS2Bm6KFN3D" target="_blank"
-         onclick="gtag('event', 'click', { 'event_category': 'channel', 'event_label': 'WhatsApp Channel Join' });">
-        <button class="channel-button" data-en="Join Our WhatsApp Channel" data-ta="எங்கள் வாட்ஸ்அப் சேனலை சேர்ந்துக்கொள்ளுங்கள்">
+      <a href="https://whatsapp.com/channel/0029Vb7ASL9HQbS2Bm6KFN3D"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <button class="channel-button">
           Join Our WhatsApp Channel
         </button>
+
       </a>
+
     </section>
 
+    <!-- Admission -->
     <section id="admission-form">
-      <h2 data-en="Admission Enquiry" data-ta="சேர்க்கை விசாரணை">Admission Enquiry</h2>
-      <p data-en="Click the button below to fill out our quick admission enquiry form directly on Google Forms." 
-         data-ta="எங்கள் ஏ.எஸ் டியூஷன் சென்டரில் சேர்க்கை பெற, கீழே உள்ள பொத்தானைக் கிளிக் செய்து கூகுள் ஃபார்ம்ஸ் வழியாக உங்கள் விவரங்களை எளிதாகப் பதிவு செய்யலாம்.">
-        Click the button below to fill out our quick admission enquiry form directly on Google Forms.
+
+      <h2>Admission Enquiry</h2>
+
+      <p>
+        Click below to fill out our admission enquiry form.
       </p>
-      
-      <div class="form-btn-container">
-        <span class="form-emoji">📝</span>
-        <a href="https://forms.gle/49sRf9heo2NuBG927" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="google-form-button"
-           onclick="gtag('event', 'click', { 'event_category': 'enquiry', 'event_label': 'Google Form Open' });"
-           data-en="👉 Open Admission Form (Google Forms)" 
-           data-ta="👉 சேர்க்கை படிவத்தை நிரப்பவும் (Google Forms)">
-           👉 Open Admission Form (Google Forms)
-        </a>
-      </div>
+
+      <a href="https://forms.gle/49sRf9heo2NuBG927"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="google-form-button">
+
+         👉 Open Admission Form
+
+      </a>
+
     </section>
 
+    <!-- Staff -->
     <section id="staff">
-      <h2 data-en="Our Teaching Staff" data-ta="எங்கள் ஆசிரியர்கள்">Our Teaching Staff</h2>
+
+      <h2>Our Teaching Staff</h2>
+
       <div class="staff-grid">
+
         <div class="staff-member">
-          <img src="https://via.placeholder.com/150x150?text=Staff+1" alt="Staff 1">
-          <h3 data-en="Mr. Aravindh.M , M.E" data-ta="திரு. அரவிந்த்.M , M.E,">Mr. Aravindh.M, M.E,</h3>
-          <p data-en="Founder & Senior Teacher" data-ta="நிறுவனர் மற்றும் மூத்த தமிழ் ஆங்கிலம் கணிதம் அறிவியல் சமூக அறிவியல் இயற்பியல் வேதியியல் உயிரியல் கணினி அறிவியல் கணக்கியல் பொருளாதார வணிகம் கணினி பயன்பாடுகள் ஆசிரியர்">Founder & Senior Teacher</p>
+
+          <img src="public/aravindh.jpg"
+               alt="Mr Aravindh M.E Founder and Senior Teacher">
+
+          <h3>Mr. Aravindh.M, M.E</h3>
+
+          <p>
+            Founder & Senior Teacher
+          </p>
+
         </div>
+
         <div class="staff-member">
-          <img src="https://via.placeholder.com/150x150?text=Staff+2" alt="Staff 2">
-          <h3 data-en="Mrs. Sangeetha.A ,M.Sc," data-ta="திருமதி. சங்கீதா.A ,M.Sc,">Mrs. Sangeetha.A ,M.Sc</h3>
-          <p data-en="Maths & English Teacher" data-ta="தமிழ் ஆங்கிலம் கணிதம் அறிவியல் சமூக அறிவியல் இயற்பியல் வேதியியல் உயிரியல் கணக்கியல் பொருளாதார வணிகம் கணினி பயன்பாடுகள் ஆசிரியர்">Maths & English Teacher</p>
+
+          <img src="public/sangeetha.jpg"
+               alt="Mrs Sangeetha M.Sc Teacher">
+
+          <h3>Mrs. Sangeetha.A, M.Sc</h3>
+
+          <p>
+            Maths & English Teacher
+          </p>
+
         </div>
+
       </div>
+
     </section>
 
+    <!-- About -->
     <section id="about">
-      <h2 data-en="About A.S Tuition Center" data-ta="ஏ.எஸ் டியூஷன் சென்டர் பற்றி">About A.S Tuition Center</h2>
-      <p data-en="We are committed to delivering high-quality education from LKG to 12th Standard. Our approach is rooted in concept-based learning and personal attention to each student. We also offer skill development programs and video-based learning every day." data-ta="ஏ.எஸ் டியூஷன் சென்டர் LKG முதல் 12 ஆம் வகுப்பு வரையிலான மாணவர்களுக்கு தரமான கல்வியை வழங்க அர்ப்பணிக்கப்பட்டுள்ளது. எங்கள் அணுகுமுறை கருத்து அடிப்படையிலான கற்றல் மற்றும் ஒவ்வொரு மாணவருக்கும் தனிப்பட்ட கவனத்தில் வேரூன்றியுள்ளது. நாங்கள் தினசரி திறன் மேம்பாட்டு திட்டங்கள் மற்றும் வீடியோ அடிப்படையிலான கற்றலையும் வழங்குகிறோம்.">We are committed to delivering high-quality education from LKG to 12th Standard. Our approach is rooted in concept-based learning and personal attention to each student. We also offer skill development programs and video-based learning every day.</p>
+
+      <h2>About Us</h2>
+
+      <p>
+        We are committed to delivering high-quality education
+        from LKG to 12th standard with concept-based learning
+        and individual student attention.
+      </p>
+
     </section>
 
+    <!-- Courses -->
     <section id="courses">
-      <h2 data-en="Courses Offered" data-ta="வழங்கப்படும் படிப்புகள்">Courses Offered</h2>
+
+      <h2>Courses Offered</h2>
+
       <ul>
-        <li data-en="LKG to 12th Standard (State Board & CBSE)" data-ta="LKG முதல் 12 ஆம் வகுப்பு வரை (மாநில வாரியம் & சிபிஎஸ்இ)">LKG to 12th Standard (State Board & CBSE)</li>
-        <li data-en="Tamil, English, Mathematics, Science, Social Science" data-ta="தமிழ், ஆங்கிலம், கணிதம், அறிவியல், சமூக அறிவியல்">Tamil, English, Mathematics, Science, Social Science</li>
-        <li data-en="Physics, Chemistry, Biology, Computer Science" data-ta="இயற்பியல், வேதியியல், உயிரியல், கணினி அறிவியல்">Physics, Chemistry, Biology, Computer Science</li>
-        <li data-en="Commerce, Accountancy, Economics" data-ta="வர்த்தகம், கணக்கியல், பொருளாதாரம்">Commerce, Accountancy, Economics</li>
+
+        <li>LKG to 12th Standard</li>
+        <li>State Board & CBSE</li>
+        <li>Tamil, English, Mathematics</li>
+        <li>Science & Social Science</li>
+        <li>Physics, Chemistry, Biology</li>
+        <li>Computer Science</li>
+        <li>Commerce & Accountancy</li>
+
       </ul>
+
     </section>
 
+    <!-- Video -->
     <section id="video">
-      <h2 data-en="Daily Learning Video" data-ta="தினசரி கற்றல் வீடியோ">Daily Learning Video</h2>
+
+      <h2>Daily Learning Video</h2>
+
       <div class="video-wrapper">
-        <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/n_LMT7mec2w?start=27"
-                title="Daily Learning Video"
-                allowfullscreen>
-         iframe>
-      </div>
-    </section>
 
-    <section id="gallery" style="text-align: center; padding: 40px 20px; background-color: #f9f9f9; border-radius: 8px; margin: 20px 0;">
-      <h2 data-en="Our Gallery" data-ta="எங்கள் கேலரி">Our Gallery</h2>
-      <p data-en="Click the button below to view all the latest photos of our classrooms, students, and events directly in our Google Drive folder." 
-         data-ta="எங்கள் ஏ.எஸ் டியூஷன் சென்டரின் வகுப்பறை சூழல், மாணவர்கள் மற்றும் நிகழ்வுகளின் புகைப்படங்களைக் கீழே உள்ள பொத்தானைக் கிளிக் செய்து எங்களது கூகுள் டிரைவ் பக்கத்தில் நேரடியாகக் காணலாம்.">
-        Click the button below to view all the latest photos of our classrooms, students, and events directly in our Google Drive folder.
-      </p>
+        <iframe
+          src="https://www.youtube.com/embed/n_LMT7mec2w?start=27"
+          title="Daily Learning Video"
+          allowfullscreen>
+        </iframe>
 
-      <div style="margin: 30px 0;">
-        <span style="font-size: 3rem; display: block; margin-bottom: 15px;">📸</span>
-        <a href="https://drive.google.com/drive/folders/1ukQdwGFyZ5-TrUmawLTO6h2xscx9xC32?usp=sharing" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           onclick="gtag('event', 'click', { 'event_category': 'gallery', 'event_label': 'Google Drive Gallery Open' });"
-           style="display: inline-block; background-color: #0d6efd; color: white; padding: 15px 35px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
-           <span data-en="👉 View Our Photos (Google Drive)" data-ta="👉 புகைப்படங்களைக் காண்க (கூகுள் டிரைவ்)">👉 View Our Photos (Google Drive)</span>
-        </a>
       </div>
 
-      <p style="font-size: 14px; color: #666;" 
-         data-en="Note: New photos are regularly updated inside this folder." 
-         data-ta="குறிப்பு: புதிய புகைப்படங்கள் அவ்வப்போது இந்த ஃபோல்டரில் நேரடியாகப் புதுப்பிக்கப்படும்.">
-        Note: New photos are regularly updated inside this folder.
-      </p>
     </section>
 
+    <!-- Gallery -->
+    <section id="gallery">
+
+      <h2>Our Gallery</h2>
+
+      <p>
+        View our latest classroom and student photos.
+      </p>
+
+      <a href="https://drive.google.com/drive/folders/1ukQdwGFyZ5-TrUmawLTO6h2xscx9xC32?usp=sharing"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="google-form-button">
+
+         📸 View Gallery
+
+      </a>
+
+    </section>
+
+    <!-- Testimonials -->
     <section id="testimonials">
-      <h2 data-en="Student Testimonials" data-ta="மாணவர் சான்றுகள்">Student Testimonials</h2>
-      <div class="testimonial-carousel">
-        <div class="testimonial-item">
-          <p data-en="'A.S Tuition Center helped me understand complex concepts easily. The teachers are very supportive!'" data-ta="'ஏ.எஸ் டியூஷன் சென்டர் எனக்கு கடினமான கருத்துக்களை எளிதாகப் புரிந்துகொள்ள உதவியது. ஆசிரியர்கள் மிகவும் ஆதரவாக இருக்கிறார்கள்!'">
-            'A.S Tuition Center helped me understand complex concepts easily. The teachers are very supportive!'
-          </p>
-          <p class="author" data-en="- Student A" data-ta="- மாணவர் அ">- Student A</p>
-        </div>
 
-        <div class="testimonial-item">
-          <p data-en="'My grades improved significantly after joining A.S Tuition. Highly recommended!'" data-ta="'ஏ.எஸ் டியூஷனில் சேர்ந்த பிறகு என் மதிப்பெண்கள் கணிசமாக உயர்ந்தன. மிகவும் பரிந்துரைக்கப்படுகிறது!'">
-            'My grades improved significantly after joining A.S Tuition. Highly recommended!'
-          </p>
-          <p class="author" data-en="- Parent of Student B" data-ta="- மாணவர் ஆ-வின் பெற்றோர்">- Parent of Student B</p>
-        </div>
+      <h2>Student Testimonials</h2>
 
-        <div class="testimonial-item">
-          <p data-en="'The video-based learning is so helpful and easy to understand. I enjoy my daily studies now!'" data-ta="'வீடியோ அடிப்படையிலான கற்றல் மிகவும் பயனுள்ளதாகவும் எளிதாகவும் உள்ளது. இப்போது நான் என் தினசரி படிப்புகளை மகிழ்ச்சியாக செய்கிறேன்!'">
-            'The video-based learning is so helpful and easy to understand. I enjoy my daily studies now!'
-          </p>
-          <p class="author" data-en="- Student C" data-ta="- மாணவர் சி">- Student C</p>
-        </div>
+      <div class="testimonial-item">
+
+        <p>
+          "A.S Tuition Center helped me understand concepts easily."
+        </p>
+
       </div>
+
+      <div class="testimonial-item">
+
+        <p>
+          "My grades improved significantly after joining."
+        </p>
+
+      </div>
+
     </section>
 
+    <!-- Contact -->
     <section id="contact">
-      <h2 data-en="Contact Us" data-ta="தொடர்பு கொள்ளவும்">Contact Us</h2>
+
+      <h2>Contact Us</h2>
+
       <p>
-        <strong data-en="Phone:" data-ta="தொலைபேசி:">Phone:</strong>
-        <a href="tel:9524863508">9524863508</a>
+        <strong>Phone:</strong>
+        <a href="tel:9524863508">
+          9524863508
+        </a>
       </p>
+
       <p>
-        <strong data-en="Address:" data-ta="முகவரி:">Address:</strong>
-        <span data-en="Kaliyamman Kovil Street, Vedapatti, Madathukulam"
-              data-ta="காளியம்மன் கோவில் தெரு, வேதபட்டி, மடத்துக்குளம்">
-          Kaliyamman Kovil Street, Vedapatti, Madathukulam
-        </span>
+        <strong>Address:</strong>
+        Kaliyamman Kovil Street,
+        Vedapatti,
+        Madathukulam
       </p>
 
       <div class="contact-buttons">
+
         <a href="tel:9524863508">
-          <button class="call-button" data-en="Call Now" data-ta="இப்போதே அழைக்கவும்">Call Now</button>
+          <button class="call-button">
+            Call Now
+          </button>
         </a>
 
-        <a href="upi://pay?pa=sangeethaaravindh95@okaxis&pn=SANGEETHA%20R&cu=INR" target="_blank"
-           onclick="gtag('event', 'click', { 'event_category': 'payment', 'event_label': 'GPay Donate' });">
-          <button class="gpay-button" data-en="Pay with GPay" data-ta="கூகுள் பே மூலம் பணம் செலுத்துங்கள்">Pay with GPay</button>
+        <a href="upi://pay?pa=sangeethaaravindh95@okaxis&pn=SANGEETHA%20R&cu=INR"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <button class="gpay-button">
+            Pay with GPay
+          </button>
+
         </a>
 
-        <a href="upi://pay?pa=9524863508@cnrb&pn=SANGEETHA%20R&cu=INR" target="_blank"
-           onclick="gtag('event', 'click', { 'event_category': 'payment', 'event_label': 'Donate' });">
-          <button class="donate-button" data-en="Donate" data-ta="நன்கொடை">Donate</button>
-        </a>
-
-        <p style="font-size: 14px; color: #666; margin-top: 10px;" data-en="Note: UPI payments work only on mobile devices with apps like GPay or PhonePe." data-ta="குறிப்பு: UPI கட்டணங்கள் Google Pay அல்லது PhonePe போன்ற செயலிகள் உள்ள மொபைல் சாதனங்களில் மட்டுமே செயல்படும்.">
-          Note: UPI payments work only on mobile devices with apps like GPay or PhonePe.
-        </p>
       </div>
 
+      <!-- QR -->
       <div class="qr-wrapper">
-        <img src="images/gpay.png" alt="Scan to Donate via GPay">
-        <p class="upi-id"><strong>UPI ID:</strong> sangeethaaravindh95@okaxis</p>
-        <p>Scan with any UPI app to donate</p>
+
+        <img src="images/gpay.png"
+             alt="UPI QR Code">
+
+        <p>
+          UPI ID:
+          sangeethaaravindh95@okaxis
+        </p>
+
       </div>
 
+      <!-- Map -->
       <div class="map-wrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.1257!2d77.359793!3d10.5783883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9cf9abe532d0d%3A0x26956de9148188bc!2sA%20S%20Tuition%20Centre!5e0!3m2!1sen!2sin!4v1716834000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317.88887585760205!2d77.35995399310946!3d10.578167843010261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9cf9abe532d0d%3A0x26956de9148188bc!2sA%20S%20Tuition%20Center!5e0!3m2!1sen!2sin!4v1779891752233!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
+
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p data-en="© 2025 A.S Tuition Center. All rights reserved." data-ta="© 2025 ஏ.எஸ் டியூஷன் சென்டர். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">© 2025 A.S Tuition Center. All rights reserved.</p>
+
+    <p>
+      © <span id="year"></span>
+      A.S Tuition Center.
+      All rights reserved.
+    </p>
+
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JS -->
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      gtag('event', 'page_view', {
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: window.location.pathname
-      });
-    });
+
+    document.getElementById("year").innerText =
+    new Date().getFullYear();
+
   </script>
 
 </body>
