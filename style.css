@@ -363,3 +363,53 @@ footer{
   }
 
 }
+/* =========================
+   Results Section
+========================= */
+
+.results-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+  margin-top:30px;
+}
+
+.result-card{
+  background:linear-gradient(
+    135deg,
+    #6a1b9a,
+    #c2185b
+  );
+  color:white;
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.result-card:hover{
+  transform:translateY(-6px);
+}
+
+.result-card h3{
+  font-size:2rem;
+  margin-bottom:15px;
+}
+
+.result-card h1{
+  font-size:3rem;
+  color:#ffeb3b;
+  margin-bottom:20px;
+}
+
+.result-card ul{
+  list-style:none;
+  padding:0;
+}
+
+.result-card li{
+  margin-bottom:10px;
+  font-size:1.1rem;
+  font-weight:500;
+}
