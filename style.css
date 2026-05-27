@@ -409,3 +409,45 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* அட்மிஷன் பட்டன் அலைன்மென்ட் */
+.form-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.form-emoji {
+    font-size: 3rem;
+    display: block;
+}
+
+.google-form-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.google-form-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5);
+    color: white;
+}
+
+/* மொபைல் போன் திரைகளுக்கு (Responsive Adjustment) */
+@media (max-width: 600px) {
+    .google-form-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
