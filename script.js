@@ -1,41 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Language Toggle
   const langToggle = document.getElementById('lang-toggle');
-  const translatableElements = document.querySelectorAll('[data-en]');
-  const whatsappButton = document.getElementById('whatsapp-button');
-  const channelBtn = document.querySelector('.channel-button');
 
-  let currentLang = localStorage.getItem('lang') || 'en';
+  // All Translatable Elements
+  const translatableElements =
+    document.querySelectorAll('[data-en]');
 
+  // Default Language
+  let currentLang =
+    localStorage.getItem('lang') || 'en';
+
+  // Update Language
   function updateLanguage() {
-    langToggle.textContent = currentLang === 'en' ? 'தமிழ்' : 'English';
+
+    // Toggle Button Text
+    langToggle.textContent =
+      currentLang === 'en'
+      ? 'தமிழ்'
+      : 'English';
+
+    // Update Elements
     translatableElements.forEach(el => {
-      el.textContent = el.dataset[currentLang];
+
+      if (el.dataset[currentLang]) {
+
+        el.textContent =
+          el.dataset[currentLang];
+
+      }
+
     });
+
   }
 
+  // Initial Load
   updateLanguage();
 
+  // Toggle Event
   langToggle?.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'ta' : 'en';
-    localStorage.setItem('lang', currentLang);
+
+    currentLang =
+      currentLang === 'en'
+      ? 'ta'
+      : 'en';
+
+    localStorage.setItem(
+      'lang',
+      currentLang
+    );
+
     updateLanguage();
+
   });
 
-  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  // Smooth Scroll Navigation
+  document.querySelectorAll(
+    'nav a[href^="#"]'
+  ).forEach(anchor => {
+
+    anchor.addEventListener('click', function(e) {
+
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+
+      const target =
+        document.querySelector(
+          this.getAttribute('href')
+        );
+
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+
       }
+
     });
+
   });
 
-  whatsappButton?.addEventListener('click', () => {
-    window.open("https://wa.me/9524863508", "_blank");
-  });
-
-  channelBtn?.addEventListener('click', () => {
-    window.open("https://whatsapp.com/channel/0029Vb7ASL9HQbS2Bm6KFN3D", "_blank");
-  });
 });
