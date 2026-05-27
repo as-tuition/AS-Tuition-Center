@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // =========================
-  // Language Toggle
-  // =========================
+  // =========================================
+  // LANGUAGE TOGGLE
+  // =========================================
 
   const langToggle =
     document.getElementById('lang-toggle');
@@ -14,20 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentLang =
     localStorage.getItem('lang') || 'en';
 
-  // Update Language Function
+  // Update Language
   function updateLanguage() {
 
-    // Update Toggle Button Text
+    // Toggle Button Text
     if (langToggle) {
 
       langToggle.textContent =
         currentLang === 'en'
-        ? 'தமிழ்'
-        : 'English';
+          ? 'தமிழ்'
+          : 'English';
 
     }
 
-    // Update All Elements
+    // Update All Translatable Elements
     translatableElements.forEach((el) => {
 
       const translatedText =
@@ -35,10 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (translatedText) {
 
-        // Preserve button/icon spacing safely
-        if (
-          el.children.length === 0
-        ) {
+        // Safe Update
+        if (el.children.length === 0) {
 
           el.textContent =
             translatedText;
@@ -54,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Load
   updateLanguage();
 
-  // Toggle Button Click
+  // Toggle Event
   langToggle?.addEventListener('click', () => {
 
     currentLang =
       currentLang === 'en'
-      ? 'ta'
-      : 'en';
+        ? 'ta'
+        : 'en';
 
     localStorage.setItem(
       'lang',
@@ -71,9 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  // =========================
-  // Smooth Scroll
-  // =========================
+  // =========================================
+  // SMOOTH SCROLL
+  // =========================================
 
   document.querySelectorAll(
     'nav a[href^="#"]'
@@ -105,9 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  // =========================
-  // Dynamic Footer Year
-  // =========================
+  // =========================================
+  // FOOTER YEAR
+  // =========================================
 
   const yearElement =
     document.getElementById('year');
@@ -119,46 +117,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
-  // =========================
-  // Future Dark Mode Support
-  // (No Conflict)
-  // =========================
+  // =========================================
+  // DARK MODE SUPPORT
+  // =========================================
 
   const darkModeToggle =
     document.getElementById('dark-mode-toggle');
 
-  if (darkModeToggle) {
+  // Load Saved Theme
+  const savedTheme =
+    localStorage.getItem('theme');
 
-    const savedTheme =
-      localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
 
-    if (savedTheme === 'dark') {
-
-      document.body.classList.add('dark-mode');
-
-    }
-
-    darkModeToggle.addEventListener(
-      'click',
-      () => {
-
-        document.body.classList.toggle(
-          'dark-mode'
-        );
-
-        const isDark =
-          document.body.classList.contains(
-            'dark-mode'
-          );
-
-        localStorage.setItem(
-          'theme',
-          isDark ? 'dark' : 'light'
-        );
-
-      }
+    document.body.classList.add(
+      'dark-mode'
     );
 
   }
+
+  // Dark Mode Toggle
+  darkModeToggle?.addEventListener(
+    'click',
+    () => {
+
+      document.body.classList.toggle(
+        'dark-mode'
+      );
+
+      const isDark =
+        document.body.classList.contains(
+          'dark-mode'
+        );
+
+      localStorage.setItem(
+        'theme',
+        isDark ? 'dark' : 'light'
+      );
+
+    }
+  );
+
+  // =========================================
+  // BUTTON CLICK EFFECT
+  // =========================================
+
+  document.querySelectorAll('button')
+    .forEach((button) => {
+
+      button.addEventListener(
+        'click',
+        () => {
+
+          button.style.transform =
+            'scale(0.96)';
+
+          setTimeout(() => {
+
+            button.style.transform =
+              '';
+
+          }, 150);
+
+        }
+      );
+
+    });
+
+  // =========================================
+  // PAGE LOADED ANIMATION
+  // =========================================
+
+  document.body.style.opacity = '0';
+
+  window.addEventListener('load', () => {
+
+    document.body.style.transition =
+      'opacity 0.5s ease';
+
+    document.body.style.opacity = '1';
+
+  });
 
 });
