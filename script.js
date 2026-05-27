@@ -1,202 +1,122 @@
+/* =========================================================
+   A.S Tuition Center — FINAL PRODUCTION JS
+   Features:
+   - Footer year (once, here only)
+   - Language toggle with localStorage
+   - Dark mode toggle with localStorage
+   - Hamburger menu (mobile)
+   - Smooth scroll (merged with hamburger close)
+   - Button press effect
+========================================================= */
+
 document.addEventListener('DOMContentLoaded', () => {
-
-  // =========================================
-  // LANGUAGE TOGGLE
-  // =========================================
-
-  const langToggle =
-    document.getElementById('lang-toggle');
-
-  const translatableElements =
-    document.querySelectorAll('[data-en]');
-
-  // Default Language
-  let currentLang =
-    localStorage.getItem('lang') || 'en';
-
-  // Update Language
-  function updateLanguage() {
-
-    // Toggle Button Text
-    if (langToggle) {
-
-      langToggle.textContent =
-        currentLang === 'en'
-          ? 'தமிழ்'
-          : 'English';
-
-    }
-
-    // Update All Translatable Elements
-    translatableElements.forEach((el) => {
-
-      const translatedText =
-        el.dataset[currentLang];
-
-      if (translatedText) {
-
-        // Safe Update
-        if (el.children.length === 0) {
-
-          el.textContent =
-            translatedText;
-
-        }
-
-      }
-
-    });
-
-  }
-
-  // Initial Load
-  updateLanguage();
-
-  // Toggle Event
-  langToggle?.addEventListener('click', () => {
-
-    currentLang =
-      currentLang === 'en'
-        ? 'ta'
-        : 'en';
-
-    localStorage.setItem(
-      'lang',
-      currentLang
-    );
-
-    updateLanguage();
-
-  });
-
-  // =========================================
-  // SMOOTH SCROLL
-  // =========================================
-
-  document.querySelectorAll(
-    'nav a[href^="#"]'
-  ).forEach((anchor) => {
-
-    anchor.addEventListener(
-      'click',
-      function (e) {
-
-        e.preventDefault();
-
-        const targetId =
-          this.getAttribute('href');
-
-        const target =
-          document.querySelector(targetId);
-
-        if (target) {
-
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-
-        }
-
-      }
-    );
-
-  });
 
   // =========================================
   // FOOTER YEAR
   // =========================================
 
-  const yearElement =
-    document.getElementById('year');
-
-  if (yearElement) {
-
-    yearElement.textContent =
-      new Date().getFullYear();
-
-  }
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // =========================================
-  // DARK MODE SUPPORT
+  // LANGUAGE TOGGLE
   // =========================================
 
-  const darkModeToggle =
-    document.getElementById('dark-mode-toggle');
+  const langToggle = document.getElementById('lang-toggle');
+  const translatables = document.querySelectorAll('[data-en]');
+  let currentLang = localStorage.getItem('lang') || 'en';
 
-  // Load Saved Theme
-  const savedTheme =
-    localStorage.getItem('theme');
-
-  if (savedTheme === 'dark') {
-
-    document.body.classList.add(
-      'dark-mode'
-    );
-
-  }
-
-  // Dark Mode Toggle
-  darkModeToggle?.addEventListener(
-    'click',
-    () => {
-
-      document.body.classList.toggle(
-        'dark-mode'
-      );
-
-      const isDark =
-        document.body.classList.contains(
-          'dark-mode'
-        );
-
-      localStorage.setItem(
-        'theme',
-        isDark ? 'dark' : 'light'
-      );
-
+  function applyLanguage() {
+    if (langToggle) {
+      langToggle.textContent = currentLang === 'en' ? 'தமிழ்' : 'English';
     }
-  );
 
-  // =========================================
-  // BUTTON CLICK EFFECT
-  // =========================================
-
-  document.querySelectorAll('button')
-    .forEach((button) => {
-
-      button.addEventListener(
-        'click',
-        () => {
-
-          button.style.transform =
-            'scale(0.96)';
-
-          setTimeout(() => {
-
-            button.style.transform =
-              '';
-
-          }, 150);
-
-        }
-      );
-
+    translatables.forEach((el) => {
+      const text = el.dataset[currentLang];
+      if (!text) return;
+      // Update only leaf elements (no child elements)
+      if (el.children.length === 0) {
+        el.textContent = text;
+      }
     });
+  }
+
+  applyLanguage();
+
+  langToggle?.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'ta' : 'en';
+    localStorage.setItem('lang', currentLang);
+    applyLanguage();
+  });
 
   // =========================================
-  // PAGE LOADED ANIMATION
+  // DARK MODE TOGGLE
   // =========================================
 
-  document.body.style.opacity = '0';
+  const darkToggle = document.getElementById('dark-mode-toggle');
 
-  window.addEventListener('load', () => {
+  // Apply saved preference
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    if (darkToggle) darkToggle.textContent = '☀️';
+  }
 
-    document.body.style.transition =
-      'opacity 0.5s ease';
+  darkToggle?.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    darkToggle.textContent = isDark ? '☀️' : '🌙';
+  });
 
-    document.body.style.opacity = '1';
+  // =========================================
+  // HAMBURGER MENU
+  // =========================================
 
+  const hamburger = document.getElementById('hamburger');
+  const navMenu   = document.getElementById('nav-menu');
+
+  function closeMenu() {
+    navMenu?.classList.remove('open');
+    if (hamburger) {
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    }
+  }
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.textContent = isOpen ? '✕' : '☰';
+  });
+
+  // =========================================
+  // NAV LINKS — smooth scroll + close menu
+  // (single listener handles both)
+  // =========================================
+
+  navMenu?.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMenu();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // =========================================
+  // BUTTON PRESS EFFECT
+  // (skip lang-toggle and dark-mode-toggle
+  //  to avoid jitter with their own transitions)
+  // =========================================
+
+  document.querySelectorAll('button').forEach((btn) => {
+    if (btn.id === 'lang-toggle' || btn.id === 'dark-mode-toggle') return;
+    btn.addEventListener('click', () => {
+      btn.style.transform = 'scale(0.95)';
+      setTimeout(() => { btn.style.transform = ''; }, 150);
+    });
   });
 
 });
