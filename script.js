@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // =========================
   // Language Toggle
-  const langToggle = document.getElementById('lang-toggle');
+  // =========================
 
-  // All Translatable Elements
+  const langToggle =
+    document.getElementById('lang-toggle');
+
   const translatableElements =
     document.querySelectorAll('[data-en]');
 
@@ -11,22 +14,36 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentLang =
     localStorage.getItem('lang') || 'en';
 
-  // Update Language
+  // Update Language Function
   function updateLanguage() {
 
-    // Toggle Button Text
-    langToggle.textContent =
-      currentLang === 'en'
-      ? 'தமிழ்'
-      : 'English';
+    // Update Toggle Button Text
+    if (langToggle) {
 
-    // Update Elements
-    translatableElements.forEach(el => {
+      langToggle.textContent =
+        currentLang === 'en'
+        ? 'தமிழ்'
+        : 'English';
 
-      if (el.dataset[currentLang]) {
+    }
 
-        el.textContent =
-          el.dataset[currentLang];
+    // Update All Elements
+    translatableElements.forEach((el) => {
+
+      const translatedText =
+        el.dataset[currentLang];
+
+      if (translatedText) {
+
+        // Preserve button/icon spacing safely
+        if (
+          el.children.length === 0
+        ) {
+
+          el.textContent =
+            translatedText;
+
+        }
 
       }
 
@@ -37,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Load
   updateLanguage();
 
-  // Toggle Event
+  // Toggle Button Click
   langToggle?.addEventListener('click', () => {
 
     currentLang =
@@ -54,30 +71,94 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  // Smooth Scroll Navigation
+  // =========================
+  // Smooth Scroll
+  // =========================
+
   document.querySelectorAll(
     'nav a[href^="#"]'
-  ).forEach(anchor => {
+  ).forEach((anchor) => {
 
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener(
+      'click',
+      function (e) {
 
-      e.preventDefault();
+        e.preventDefault();
 
-      const target =
-        document.querySelector(
-          this.getAttribute('href')
-        );
+        const targetId =
+          this.getAttribute('href');
 
-      if (target) {
+        const target =
+          document.querySelector(targetId);
 
-        target.scrollIntoView({
-          behavior: 'smooth'
-        });
+        if (target) {
+
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+        }
 
       }
-
-    });
+    );
 
   });
+
+  // =========================
+  // Dynamic Footer Year
+  // =========================
+
+  const yearElement =
+    document.getElementById('year');
+
+  if (yearElement) {
+
+    yearElement.textContent =
+      new Date().getFullYear();
+
+  }
+
+  // =========================
+  // Future Dark Mode Support
+  // (No Conflict)
+  // =========================
+
+  const darkModeToggle =
+    document.getElementById('dark-mode-toggle');
+
+  if (darkModeToggle) {
+
+    const savedTheme =
+      localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+
+      document.body.classList.add('dark-mode');
+
+    }
+
+    darkModeToggle.addEventListener(
+      'click',
+      () => {
+
+        document.body.classList.toggle(
+          'dark-mode'
+        );
+
+        const isDark =
+          document.body.classList.contains(
+            'dark-mode'
+          );
+
+        localStorage.setItem(
+          'theme',
+          isDark ? 'dark' : 'light'
+        );
+
+      }
+    );
+
+  }
 
 });
