@@ -383,6 +383,84 @@ button:active {
   font-size: 1.1rem;
 }
 
+/* =========================================================
+   STAFF EXTRA PROFESSIONAL DESIGN
+========================================================= */
+
+.staff-role{
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.staff-description{
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.staff-tags{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.staff-tags span{
+  background: linear-gradient(135deg, #005bea, #003b99);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,91,234,0.25);
+  transition: 0.3s;
+}
+
+.staff-tags span:hover{
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #007bff, #005bea);
+}
+
+/* =========================
+   DARK MODE SUPPORT
+========================= */
+
+body.dark-mode .staff-role,
+body.dark-mode .staff-description{
+  color: #ddd;
+}
+
+body.dark-mode .staff-tags span{
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 768px){
+
+  .staff-description{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .staff-tags{
+    gap: 8px;
+  }
+
+  .staff-tags span{
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+}
+
 /* =========================
    RESULTS
 ========================= */
